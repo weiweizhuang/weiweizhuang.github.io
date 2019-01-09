@@ -8,7 +8,7 @@ subtitle: "weiweizhuang个人分享"
 description: "一条想翻身的咸鱼"
 keywords: "前端, hexo, js, vue, react, angular, ant, javascript, node, nodejs, webpack, weiweizhuang, 庄为, 为"
 author: "庄为"
-language: "中文"
+language: zh-CN 
 timezone:
 
 # URL
