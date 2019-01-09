@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一条咸鱼的自述</title>
+  
+  <subtitle>weiweizhuang个人分享</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="zweiwei.cn/"/>
+  <updated>2019-01-09T15:56:30.010Z</updated>
+  <id>zweiwei.cn/</id>
+  
+  <author>
+    <name>庄为</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello Worldrate</title>
+    <link href="zweiwei.cn/hello-world/"/>
+    <id>zweiwei.cn/hello-world/</id>
+    <published>2019-01-09T15:56:30.010Z</published>
+    <updated>2019-01-09T15:56:30.010Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>博主简介</title>
+    <link href="zweiwei.cn/test/"/>
+    <id>zweiwei.cn/test/</id>
+    <published>2019-01-09T10:49:50.000Z</published>
+    <updated>2019-01-09T15:56:30.011Z</updated>
+    
+    <content type="html"><![CDATA[<p>##个人简介</p><blockquote><p>个人信息</p></blockquote><p>  性别: 男<br>  爱好: 女<br>  职位: 前端工程师<br>  技能: html,css,js,ts,angular,vue,nodejs,php,java.python</p><p>##个人发展<br>    <img src="http://zweiwei.cn" alt="个人网站"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;##个人简介&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;个人信息&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  性别: 男&lt;br&gt;  爱好: 女&lt;br&gt;  职位: 前端工程师&lt;br&gt;  技能: html,css,js,ts,angular,vue,nodejs,php,jav
+      
+    
+    </summary>
+    
+      <category term="about" scheme="zweiwei.cn/categories/about/"/>
+    
+    
+      <category term="前端" scheme="zweiwei.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="about" scheme="zweiwei.cn/tags/about/"/>
+    
+  </entry>
+  
+</feed>
