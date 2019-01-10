@@ -85,5 +85,6 @@ plugins: hexo-generate-feed
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/weiweizhuang/weiweizhuang.github.io.git
+  repo: https://weiweizhuang:Zw934115@github.com/weiweizhuang/weiweizhuang.github.io.git
   branch: master
+  message: now('YYYY-MM-DD HH:mm:ss')
