@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="一条想翻身的咸鱼">
-<meta name="keywords" content="前端, hexo, js, vue, react, angular, ant, javascript, node, nodejs, webpack, weiweizhuang, 庄为, 为">
+  <meta name="description" content="关于map循环+使用模板字符串​    公司的项目使用的jq，所以用到es6的语法比较少，由于项目比较忙，所以想偷懒，用用ES6语法。。。 ​    以上为使用背景，然后就不知不觉掉进了一个大坑。 ​    话不多说，直接上代码： ​    12345678910111213141516171819202122​	 var arr = [&amp;apos;张三&amp;apos;,&amp;apos;李四&amp;apos;,">
+<meta name="keywords" content="es6,前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello Worldrate">
-<meta property="og:url" content="zweiwei.cn/hello-world/index.html">
+<meta property="og:title" content="map循环的坑">
+<meta property="og:url" content="zweiwei.cn/ES6关于map循环的坑/index.html">
 <meta property="og:site_name" content="一条咸鱼的自述">
-<meta property="og:description" content="一条想翻身的咸鱼">
+<meta property="og:description" content="关于map循环+使用模板字符串​    公司的项目使用的jq，所以用到es6的语法比较少，由于项目比较忙，所以想偷懒，用用ES6语法。。。 ​    以上为使用背景，然后就不知不觉掉进了一个大坑。 ​    话不多说，直接上代码： ​    12345678910111213141516171819202122​	 var arr = [&amp;apos;张三&amp;apos;,&amp;apos;李四&amp;apos;,">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-09T15:56:30.010Z">
+<meta property="og:updated_time" content="2019-01-16T14:40:24.038Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello Worldrate">
-<meta name="twitter:description" content="一条想翻身的咸鱼">
+<meta name="twitter:title" content="map循环的坑">
+<meta name="twitter:description" content="关于map循环+使用模板字符串​    公司的项目使用的jq，所以用到es6的语法比较少，由于项目比较忙，所以想偷懒，用用ES6语法。。。 ​    以上为使用背景，然后就不知不觉掉进了一个大坑。 ​    话不多说，直接上代码： ​    12345678910111213141516171819202122​	 var arr = [&amp;apos;张三&amp;apos;,&amp;apos;李四&amp;apos;,">
 
 
 
@@ -116,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="zweiwei.cn/hello-world/">
+  <link rel="canonical" href="zweiwei.cn/ES6关于map循环的坑/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>Hello Worldrate | 一条咸鱼的自述</title>
+  <title>map循环的坑 | 一条咸鱼的自述</title>
   
 
 
@@ -363,7 +363,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="zweiwei.cn/hello-world/">
+    <link itemprop="mainEntityOfPage" href="zweiwei.cn/ES6关于map循环的坑/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="庄为">
@@ -380,7 +380,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello Worldrate
+          <h1 class="post-title" itemprop="name headline">map循环的坑
 
               
             
@@ -406,12 +406,34 @@
                 
               
 
-              <time title="创建时间：2019-01-09 23:56:30" itemprop="dateCreated datePublished" datetime="2019-01-09T23:56:30+08:00">2019-01-09</time>
+              <time title="创建时间：2019-01-16 21:54:00 / 修改时间：22:40:24" itemprop="dateCreated datePublished" datetime="2019-01-16T21:54:00+08:00">2019-01-16</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/es6/" itemprop="url" rel="index"><span itemprop="name">es6</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -440,7 +462,29 @@
       
 
       
-        
+        <h3 id="关于map循环-使用模板字符串"><a href="#关于map循环-使用模板字符串" class="headerlink" title="关于map循环+使用模板字符串"></a>关于map循环+使用模板字符串</h3><p>​    公司的项目使用的jq，所以用到es6的语法比较少，由于项目比较忙，所以想偷懒，用用ES6语法。。。</p>
+<p>​    以上为使用背景，然后就不知不觉掉进了一个大坑。</p>
+<p>​    话不多说，直接上代码：</p>
+<p>​    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">​	 var arr = [&apos;张三&apos;,&apos;李四&apos;,&apos;玩物&apos;];</span><br><span class="line"></span><br><span class="line">        var html =&quot;&quot;;</span><br><span class="line"></span><br><span class="line">​        arr.map(item=&gt;&#123;</span><br><span class="line"></span><br><span class="line">            html+=`&lt;li&gt;</span><br><span class="line"></span><br><span class="line">                $&#123;arr.map(value=&gt;&#123;</span><br><span class="line"></span><br><span class="line">                    return `&lt;span&gt;$&#123;value&#125;&lt;/span&gt;`</span><br><span class="line"></span><br><span class="line">                &#125;)&#125;</span><br><span class="line"></span><br><span class="line">            &lt;/li&gt;`</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">​        $(&quot;#test&quot;).html(html);</span><br><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>张三,李四,玩物</li>
+<li>张三,李四,玩物</li>
+<li>张三,李四,玩物</li>
+</ul>
+<p>看到没有，中间是不是有逗号；</p>
+<p>先上解决办法</p>
+<p>​           <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> html+=`&lt;li&gt;</span><br><span class="line"></span><br><span class="line">​                $&#123;arr.map(value=&gt;&#123;</span><br><span class="line"></span><br><span class="line">                    return `&lt;span&gt;$&#123;value&#125;&lt;/span&gt;`</span><br><span class="line"></span><br><span class="line">​                &#125;).join(&apos;&apos;)&#125;</span><br><span class="line"></span><br><span class="line">            &lt;/li&gt;`</span><br><span class="line"></span><br><span class="line">​       &#125;)</span><br></pre></td></tr></table></figure></p>
+<p><code>`</code></p>
+<ul>
+<li><p>张三李四玩物</p>
+</li>
+<li><p>张三李四玩物</p>
+</li>
+<li><p>张三李四玩物</p>
+</li>
+</ul>
+<p>有谁能详细的解释一下吗，这个坑先记录一下，今天浪费了我好久的时间，以免后面会忘记！</p>
+
       
     </div>
 
@@ -461,6 +505,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/es6/" rel="tag"><i class="fa fa-heart-o fa-3x"></i> es6</a>
+          
+            <a href="/tags/前端/" rel="tag"><i class="fa fa-heart-o fa-3x"></i> 前端</a>
+          
+        </div>
+      
 
       
       
@@ -470,8 +522,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/test/" rel="next" title="博主简介">
-                <i class="fa fa-chevron-left"></i> 博主简介
+              <a href="/hello-world/" rel="next" title="Hello Worldrate">
+                <i class="fa fa-chevron-left"></i> Hello Worldrate
               </a>
             
           </div>
@@ -479,10 +531,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ES6关于map循环的坑/" rel="prev" title="map循环的坑">
-                map循环的坑 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -527,8 +575,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -613,6 +670,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于map循环-使用模板字符串"><span class="nav-number">1.</span> <span class="nav-text">关于map循环+使用模板字符串</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
