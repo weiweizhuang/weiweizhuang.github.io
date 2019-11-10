@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="zweiwei.cn/"/>
-  <updated>2019-02-19T11:52:09.255Z</updated>
+  <updated>2019-11-10T10:02:15.778Z</updated>
   <id>zweiwei.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="zweiwei.cn/2019%E6%96%B0%E5%B9%B4%E7%AC%AC%E4%B8%80%E5%91%A8%E5%BF%83%E6%83%85/"/>
     <id>zweiwei.cn/2019新年第一周心情/</id>
     <published>2019-02-17T05:58:00.000Z</published>
-    <updated>2019-02-19T11:52:09.255Z</updated>
+    <updated>2019-11-10T10:02:15.778Z</updated>
     
     <content type="html"><![CDATA[<h2 id="2019新年新心情"><a href="#2019新年新心情" class="headerlink" title="2019新年新心情"></a>2019新年新心情</h2><p>​    农历新年马上就要过完了，而我也回深圳上班一周了，第一周就在公司加班。</p><p>​    很享受一个人在公司加班。真的很安静，写代码是最适合的了，没有任何人的打扰。可是我浪费了这难得的机会，心里想着一些乱七八糟的事情。</p><p>​    整个人真的特别浮躁，给自己找的借口就是我现在承受的压力太大了，毕竟能力就那么大点，却一心想做更伟大的事情，类似于一夜暴富等等。。。 </p><p>​    我真的有努力去寻找这些，寻找怎么去让自己变的更强大，想想还有几个月就要出生的孩子，想想身后这么多年一直撑着这个家的父母，我要努力的寻找我的出路，不想让这一双双希望的眼睛里有半点暗淡。是的，毕竟我已经是一个大人了，已经成家了，后面不应该是要立业吗？而这个”立”我应该怎么去写呢？</p><p>​    昨天还和好友聊起了“立业”这方面的事情，不是我这个有家室的人先说的，反而是他先意识到的危机，以后应该怎么办！！！让我有了同感，顿时，心中想了好多。想起了我小时候，小时候天真的笑容，到处奔跑的小身影，会渴望父母陪伴在身边，会说以后长大了我要上名牌大学那可笑的誓言。。。想起青少年时期暑期出来体验社会的我，夜晚一个人走在通亮的街道，丝毫不畏惧寒冷，大喊一声我要在这个城市立足，我要买车，我要买房，我要孝顺父母。想起毕业时拿着简历到处找工作时，那一张张冷漠的脸，却也想起了我身后那两张笑脸。是啊，这么多年过去了，以前的种种，我还历历在目，我不能让我身后那一张张笑脸悲伤，更不会让我面对的每张脸冷漠。</p><p>​    始终要告诉自己，每一步都要稳住，不能一步登天。平复节日的浮躁心情，慢慢的按照自己的计划，一步步努力，做一件事情就要对一件事情负责。所有的事情，有上天的注定，也有自己十分的努力。</p><p>​    想到什么就写了什么，写的比较乱，也没有什么逻辑可言，纯属写一点心情，安抚一下自己不羁的个性。</p><p>​    加油，2019，克服自己这关，做好手头工作，寻找突破口！！！</p><p>​    </p>]]></content>
     
@@ -36,80 +36,12 @@
     
       <category term="about" scheme="zweiwei.cn/categories/about/"/>
     
+      <category term="心情随记" scheme="zweiwei.cn/categories/about/%E5%BF%83%E6%83%85%E9%9A%8F%E8%AE%B0/"/>
+    
+      <category term="杂记" scheme="zweiwei.cn/categories/about/%E5%BF%83%E6%83%85%E9%9A%8F%E8%AE%B0/%E6%9D%82%E8%AE%B0/"/>
+    
     
       <category term="心情" scheme="zweiwei.cn/tags/%E5%BF%83%E6%83%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>map循环的坑</title>
-    <link href="zweiwei.cn/ES6%E5%85%B3%E4%BA%8Emap%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%9D%91/"/>
-    <id>zweiwei.cn/ES6关于map循环的坑/</id>
-    <published>2019-01-16T13:54:00.000Z</published>
-    <updated>2019-01-16T14:40:24.038Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="关于map循环-使用模板字符串"><a href="#关于map循环-使用模板字符串" class="headerlink" title="关于map循环+使用模板字符串"></a>关于map循环+使用模板字符串</h3><p>​    公司的项目使用的jq，所以用到es6的语法比较少，由于项目比较忙，所以想偷懒，用用ES6语法。。。</p><p>​    以上为使用背景，然后就不知不觉掉进了一个大坑。</p><p>​    话不多说，直接上代码：</p><p>​    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">​ var arr = [&apos;张三&apos;,&apos;李四&apos;,&apos;玩物&apos;];</span><br><span class="line"></span><br><span class="line">        var html =&quot;&quot;;</span><br><span class="line"></span><br><span class="line">​        arr.map(item=&gt;&#123;</span><br><span class="line"></span><br><span class="line">            html+=`&lt;li&gt;</span><br><span class="line"></span><br><span class="line">                $&#123;arr.map(value=&gt;&#123;</span><br><span class="line"></span><br><span class="line">                    return `&lt;span&gt;$&#123;value&#125;&lt;/span&gt;`</span><br><span class="line"></span><br><span class="line">                &#125;)&#125;</span><br><span class="line"></span><br><span class="line">            &lt;/li&gt;`</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">​        $(&quot;#test&quot;).html(html);</span><br><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure></p><ul><li>张三,李四,玩物</li><li>张三,李四,玩物</li><li>张三,李四,玩物</li></ul><p>看到没有，中间是不是有逗号；</p><p>先上解决办法</p><p>​           <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> html+=`&lt;li&gt;</span><br><span class="line"></span><br><span class="line">​                $&#123;arr.map(value=&gt;&#123;</span><br><span class="line"></span><br><span class="line">                    return `&lt;span&gt;$&#123;value&#125;&lt;/span&gt;`</span><br><span class="line"></span><br><span class="line">​                &#125;).join(&apos;&apos;)&#125;</span><br><span class="line"></span><br><span class="line">            &lt;/li&gt;`</span><br><span class="line"></span><br><span class="line">​       &#125;)</span><br></pre></td></tr></table></figure></p><p><code>`</code></p><ul><li><p>张三李四玩物</p></li><li><p>张三李四玩物</p></li><li><p>张三李四玩物</p></li></ul><p>有谁能详细的解释一下吗，这个坑先记录一下，今天浪费了我好久的时间，以免后面会忘记！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;关于map循环-使用模板字符串&quot;&gt;&lt;a href=&quot;#关于map循环-使用模板字符串&quot; class=&quot;headerlink&quot; title=&quot;关于map循环+使用模板字符串&quot;&gt;&lt;/a&gt;关于map循环+使用模板字符串&lt;/h3&gt;&lt;p&gt;​    公司的项目使用的jq，所以
-      
-    
-    </summary>
-    
-      <category term="es6" scheme="zweiwei.cn/categories/es6/"/>
-    
-    
-      <category term="es6" scheme="zweiwei.cn/tags/es6/"/>
-    
-      <category term="前端" scheme="zweiwei.cn/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello Worldrate</title>
-    <link href="zweiwei.cn/hello-world/"/>
-    <id>zweiwei.cn/hello-world/</id>
-    <published>2019-01-09T15:56:30.010Z</published>
-    <updated>2019-01-09T15:56:30.010Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>博主简介</title>
-    <link href="zweiwei.cn/test/"/>
-    <id>zweiwei.cn/test/</id>
-    <published>2019-01-09T10:49:50.000Z</published>
-    <updated>2019-01-09T15:56:30.011Z</updated>
-    
-    <content type="html"><![CDATA[<p>##个人简介</p><blockquote><p>个人信息</p></blockquote><p>  性别: 男<br>  爱好: 女<br>  职位: 前端工程师<br>  技能: html,css,js,ts,angular,vue,nodejs,php,java.python</p><p>##个人发展<br>    <img src="http://zweiwei.cn" alt="个人网站"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;##个人简介&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;个人信息&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;  性别: 男&lt;br&gt;  爱好: 女&lt;br&gt;  职位: 前端工程师&lt;br&gt;  技能: html,css,js,ts,angular,vue,nodejs,php,jav
-      
-    
-    </summary>
-    
-      <category term="about" scheme="zweiwei.cn/categories/about/"/>
-    
-    
-      <category term="前端" scheme="zweiwei.cn/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="about" scheme="zweiwei.cn/tags/about/"/>
     
   </entry>
   
