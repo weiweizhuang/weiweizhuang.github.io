@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="zweiwei.cn/"/>
-  <updated>2019-11-13T16:24:23.052Z</updated>
+  <updated>2020-01-01T02:49:37.688Z</updated>
   <id>zweiwei.cn/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue项目打包优化</title>
+    <link href="zweiwei.cn/vue%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E4%B9%8B%E6%89%93%E5%8C%85/"/>
+    <id>zweiwei.cn/vue项目构建之打包/</id>
+    <published>2020-01-01T02:49:00.000Z</published>
+    <updated>2020-01-01T02:49:37.688Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vue项目打包"><a href="#vue项目打包" class="headerlink" title="vue项目打包"></a>vue项目打包</h1><h2 id="一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M"><a href="#一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M" class="headerlink" title="一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M+"></a>一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M+</h2><p><img src="/images/build1.png" alt="优化前体积大小" title="优化前体积大小"><br><img src="/images/byte1.png" alt="优化前体积大小" title="优化前体积大小"></p><blockquote><p>这可难住我了，于是乎就想能不能压缩一下体积，毕竟一张图片的大小竟然超过了1M，这肯定是不符合生产规范的。于是乎，一只菜鸟又开始了无尽的百度之路！</p><ul><li><em>下面就放几个有关优相关的博客文章，毕竟是人家大神分享的，还是注明一下转载 ！</em></li></ul></blockquote><pre><code>肯定是先从webpack的配置入手 </code></pre><p><a href="https://blog.csdn.net/llf1991/article/details/79869351" target="_blank" rel="noopener">Vue脚手架工程优化之源码和图片压缩–webpack配置</a></p><pre><code>+ 把配置文件config/index.js文件 productionSourceMap: true 这个操作，基本上可以减少一半的体积 + 然后在下载 npm install image-webpack-loader --save-dev 在build/webpack.base.conf.js中改如下配置 </code></pre><p><a href="https://blog.csdn.net/przlovecsdn/article/details/82761606" target="_blank" rel="noopener">vue打包通过image-webpack-loader插件对图片压缩优化</a><br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  <span class="built_in">module</span>.exports = &#123;</span><br><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">       &#123;</span><br><span class="line">          test: <span class="regexp">/\.(png|jpe?g|gif|svg)(\?.*)?$/</span>,</span><br><span class="line">        <span class="comment">// loader: 'url-loader',</span></span><br><span class="line">        <span class="comment">// options: &#123;</span></span><br><span class="line">            <span class="comment">// limit: 100000,</span></span><br><span class="line">            <span class="comment">// name: utils.assetsPath('img/[name].[hash:7].[ext]')</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        loader: [<span class="string">'url-loader?limit=10000&amp;name='</span> +utils.assetsPath(<span class="string">'img/[name].[hash:7].[ext]'</span>),<span class="string">'image-webpack-loader'</span>]</span><br><span class="line">                   &#125;,</span><br><span class="line">               ]</span><br><span class="line">           &#125;,</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p><pre><code>+ 到这一步，从最初的14M+已经压缩到了3.64M。可以说体积小了很多。后面还会让UI把一些静态资源尽量压缩小一点给我，不然一张图就几MB给我，还真hold不住！待你兴冲冲的打包完，然后发布到服务器时，你呆住了，一些背景图片访问不到了。这可咋搞???</code></pre><p><img src="/images/build2.png" alt="优化后体积大小" title="优化后体积大小"><br><img src="/images/byte2.png" alt="优化后体积大小" title="优化后体积大小"><br>这可难道精通百度的我，带着这个疑惑，又是一番百度，果真找到了答案。</p><pre><code>+ 由于我使用了image-webpack-load 重新定义了图片的访问规则。所以导致一些使用背景图片的相对路径找不到文件，直接按照</code></pre><p><a href="https://www.jianshu.com/p/45acfd463347" target="_blank" rel="noopener">vue项目打包在本地直接访问</a> 设置就可以了</p><pre><code> 1 打开项目文件夹。找到config文件夹里的index.js文件中的build对象，将assetsPublicPath中的“/”，改为“./”。2 assetsPublicPath: &apos;./&apos;,改成相对路径; 如果你的css文件中引用了background相对路径,那么在打包后预览后是会出现资源找不到的情况的;可以在build文件夹的utils.js下:新增这个publicPath这个属性;</code></pre> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(options.extract) &#123;</span><br><span class="line">    <span class="keyword">return</span> ExtractTexPlugin.extract(&#123;</span><br><span class="line">        use: loaders,</span><br><span class="line">        fallback: <span class="string">'vue-style-loader'</span>,</span><br><span class="line">        publicPath: <span class="string">'../../'</span> <span class="comment">//这个是重点</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><pre><code>* 最后直接打开运行打包后的dist目录下面的index.html，项目就完美的运行起来了。** 目前就优化这些，后面再有做别的优化，再更新上来……</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;vue项目打包&quot;&gt;&lt;a href=&quot;#vue项目打包&quot; class=&quot;headerlink&quot; title=&quot;vue项目打包&quot;&gt;&lt;/a&gt;vue项目打包&lt;/h1&gt;&lt;h2 id=&quot;一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="zweiwei.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="vue" scheme="zweiwei.cn/categories/%E5%89%8D%E7%AB%AF/vue/"/>
+    
+      <category term="生产构建之打包优化" scheme="zweiwei.cn/categories/%E5%89%8D%E7%AB%AF/vue/%E7%94%9F%E4%BA%A7%E6%9E%84%E5%BB%BA%E4%B9%8B%E6%89%93%E5%8C%85%E4%BC%98%E5%8C%96/"/>
+    
+    
+      <category term="vue" scheme="zweiwei.cn/tags/vue/"/>
+    
+      <category term="前端" scheme="zweiwei.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>封装axios 请求</title>

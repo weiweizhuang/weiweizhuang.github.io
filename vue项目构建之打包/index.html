@@ -96,18 +96,23 @@
 
 
 
-  <meta name="description" content="axios封装123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172	import axios from &apos;axios&apos;    import &amp;#123; MessageBox, Me">
+  <meta name="description" content="vue项目打包一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M+  这可难住我了，于是乎就想能不能压缩一下体积，毕竟一张图片的大小竟然超过了1M，这肯定是不符合生产规范的。于是乎，一只菜鸟又开始了无尽的百度之路！  下面就放几个有关优相关的博客文章，毕竟是人家大神分享的，还是注明一下转载 ！   肯定是先从webpack的配置入">
 <meta name="keywords" content="vue,前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="封装axios 请求">
-<meta property="og:url" content="zweiwei.cn/axios封装/index.html">
+<meta property="og:title" content="vue项目打包优化">
+<meta property="og:url" content="zweiwei.cn/vue项目构建之打包/index.html">
 <meta property="og:site_name" content="一条咸鱼的自述">
-<meta property="og:description" content="axios封装123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172	import axios from &apos;axios&apos;    import &amp;#123; MessageBox, Me">
+<meta property="og:description" content="vue项目打包一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M+  这可难住我了，于是乎就想能不能压缩一下体积，毕竟一张图片的大小竟然超过了1M，这肯定是不符合生产规范的。于是乎，一只菜鸟又开始了无尽的百度之路！  下面就放几个有关优相关的博客文章，毕竟是人家大神分享的，还是注明一下转载 ！   肯定是先从webpack的配置入">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-13T16:24:23.052Z">
+<meta property="og:image" content="/images/build1.png">
+<meta property="og:image" content="/images/byte1.png">
+<meta property="og:image" content="/images/build2.png">
+<meta property="og:image" content="/images/byte2.png">
+<meta property="og:updated_time" content="2020-01-01T02:49:37.688Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="封装axios 请求">
-<meta name="twitter:description" content="axios封装123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172	import axios from &apos;axios&apos;    import &amp;#123; MessageBox, Me">
+<meta name="twitter:title" content="vue项目打包优化">
+<meta name="twitter:description" content="vue项目打包一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M+  这可难住我了，于是乎就想能不能压缩一下体积，毕竟一张图片的大小竟然超过了1M，这肯定是不符合生产规范的。于是乎，一只菜鸟又开始了无尽的百度之路！  下面就放几个有关优相关的博客文章，毕竟是人家大神分享的，还是注明一下转载 ！   肯定是先从webpack的配置入">
+<meta name="twitter:image" content="/images/build1.png">
 
 
 
@@ -116,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="zweiwei.cn/axios封装/">
+  <link rel="canonical" href="zweiwei.cn/vue项目构建之打包/">
 
 
 
@@ -126,7 +131,7 @@
   };
 </script>
 
-  <title>封装axios 请求 | 一条咸鱼的自述</title>
+  <title>vue项目打包优化 | 一条咸鱼的自述</title>
   
 
 
@@ -363,7 +368,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="zweiwei.cn/axios封装/">
+    <link itemprop="mainEntityOfPage" href="zweiwei.cn/vue项目构建之打包/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="庄为">
@@ -380,7 +385,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">封装axios 请求
+          <h1 class="post-title" itemprop="name headline">vue项目打包优化
 
               
             
@@ -406,24 +411,12 @@
                 
               
 
-              <time title="创建时间：2019-11-13 23:59:00" itemprop="dateCreated datePublished" datetime="2019-11-13T23:59:00+08:00">2019-11-13</time>
+              <time title="创建时间：2020-01-01 10:49:00 / 修改时间：10:49:37" itemprop="dateCreated datePublished" datetime="2020-01-01T10:49:00+08:00">2020-01-01</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-11-14 00:24:23" itemprop="dateModified" datetime="2019-11-14T00:24:23+08:00">2019-11-14</time>
               
             
           </span>
@@ -454,7 +447,7 @@
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/前端/vue/组件封装/" itemprop="url" rel="index"><span itemprop="name">组件封装</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/前端/vue/生产构建之打包优化/" itemprop="url" rel="index"><span itemprop="name">生产构建之打包优化</span></a></span>
 
                 
                 
@@ -488,9 +481,27 @@
       
 
       
-        <h2 id="axios封装"><a href="#axios封装" class="headerlink" title="axios封装"></a>axios封装</h2><pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span></span><br><span class="line">    <span class="keyword">import</span> &#123; MessageBox, Message &#125; <span class="keyword">from</span> <span class="string">'element-ui'</span></span><br><span class="line">    <span class="comment">// import store from '@/store'</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// create an axios instance</span></span><br><span class="line">    <span class="keyword">const</span> service = axios.create(&#123;</span><br><span class="line">      baseURL: <span class="string">''</span>, <span class="comment">// url = base url + request url</span></span><br><span class="line">      <span class="comment">// withCredentials: true, // send cookies when cross-domain requests</span></span><br><span class="line">      headers: &#123;</span><br><span class="line">        <span class="string">'Content-Type'</span>: <span class="string">'application/json'</span>,</span><br><span class="line">        <span class="string">'lang'</span>: <span class="string">'zh-CN,zh;q=0.9'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      timeout: <span class="number">5000</span> <span class="comment">// request timeout</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">        <span class="comment">// request interceptor</span></span><br><span class="line">        service.interceptors.request.use(</span><br><span class="line">          config =&gt; &#123;</span><br><span class="line">        <span class="comment">// do something before request is sent</span></span><br><span class="line">        <span class="keyword">if</span> (sessionStorage.getItem(<span class="string">"token"</span>)) &#123;</span><br><span class="line">          <span class="comment">// let each request carry token</span></span><br><span class="line">          <span class="comment">// ['x-auth-token'] is a custom headers key</span></span><br><span class="line">          <span class="comment">// please modify it according to the actual situation</span></span><br><span class="line">          config.headers[<span class="string">'x-auth-token'</span>] = sessionStorage.getItem(<span class="string">"token"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="keyword">return</span> config</span><br><span class="line">      &#125;,</span><br><span class="line">      error =&gt; &#123;</span><br><span class="line">        <span class="comment">// do something with request error</span></span><br><span class="line">        <span class="built_in">console</span>.log(error) <span class="comment">// for debug</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error)</span><br><span class="line">          &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// response interceptor</span></span><br><span class="line"></span><br><span class="line">service.interceptors.response.use(</span><br><span class="line"></span><br><span class="line">  response =&gt; &#123;</span><br><span class="line"><span class="keyword">const</span> res = response.data</span><br><span class="line"><span class="keyword">if</span>(response.headers[<span class="string">'x-auth-token'</span>]) &#123;</span><br><span class="line">    sessionStorage.setItem(<span class="string">'token'</span>, response.headers[<span class="string">'x-auth-token'</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// if the custom code is not 20000, it is judged as an error.</span></span><br><span class="line">    <span class="keyword">if</span> (response.status !== <span class="number">200</span> ) &#123;</span><br><span class="line">        Message(&#123;</span><br><span class="line">            message: res.msg || <span class="string">'Error'</span>,</span><br><span class="line">            type: <span class="string">'error'</span>,</span><br><span class="line">            duration: <span class="number">5</span> * <span class="number">1000</span></span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (res.code === <span class="number">508</span> || res.code === <span class="number">502</span> || res.code === <span class="number">503</span>) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(<span class="keyword">new</span> <span class="built_in">Error</span>(res.msg || <span class="string">'Error'</span>))</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>  <span class="built_in">Promise</span>.resolve(res)</span><br><span class="line">    &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      error =&gt; &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'err'</span> + error) <span class="comment">// for debug</span></span><br><span class="line">        Message(&#123;</span><br><span class="line">          message: error.msg,</span><br><span class="line">          type: <span class="string">'error'</span>,</span><br><span class="line">          duration: <span class="number">5</span> * <span class="number">1000</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error)</span><br><span class="line">      &#125;</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> service</span><br></pre></td></tr></table></figure>
-</code></pre><p>##先统一在一个文件里面请求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import service from &apos;../utils/ajax&apos;</span><br><span class="line">import API from &apos;../utils/API&apos;</span><br><span class="line"></span><br><span class="line">export const qesLogin = (data) =&gt; &#123;</span><br><span class="line">    return service(&#123;</span><br><span class="line">        url: API.USER.LOGIN,</span><br><span class="line">        method: &apos;post&apos;,</span><br><span class="line">        data</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="使用例子"><a href="#使用例子" class="headerlink" title="使用例子"></a>使用例子</h2><pre><code>![aixos请求例子](/images/axios-request.png)
+        <h1 id="vue项目打包"><a href="#vue项目打包" class="headerlink" title="vue项目打包"></a>vue项目打包</h1><h2 id="一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M"><a href="#一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M" class="headerlink" title="一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M+"></a>一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M+</h2><p><img src="/images/build1.png" alt="优化前体积大小" title="优化前体积大小"><br><img src="/images/byte1.png" alt="优化前体积大小" title="优化前体积大小"></p>
+<blockquote>
+<p>这可难住我了，于是乎就想能不能压缩一下体积，毕竟一张图片的大小竟然超过了1M，这肯定是不符合生产规范的。于是乎，一只菜鸟又开始了无尽的百度之路！</p>
+<ul>
+<li><em>下面就放几个有关优相关的博客文章，毕竟是人家大神分享的，还是注明一下转载 ！</em></li>
+</ul>
+</blockquote>
+<pre><code>肯定是先从webpack的配置入手 
+</code></pre><p><a href="https://blog.csdn.net/llf1991/article/details/79869351" target="_blank" rel="noopener">Vue脚手架工程优化之源码和图片压缩–webpack配置</a></p>
+<pre><code>+ 把配置文件config/index.js文件 productionSourceMap: true 这个操作，基本上可以减少一半的体积
+ + 然后在下载 npm install image-webpack-loader --save-dev 在build/webpack.base.conf.js中改如下配置 
+</code></pre><p><a href="https://blog.csdn.net/przlovecsdn/article/details/82761606" target="_blank" rel="noopener">vue打包通过image-webpack-loader插件对图片压缩优化</a><br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  <span class="built_in">module</span>.exports = &#123;</span><br><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">       &#123;</span><br><span class="line">          test: <span class="regexp">/\.(png|jpe?g|gif|svg)(\?.*)?$/</span>,</span><br><span class="line">        <span class="comment">// loader: 'url-loader',</span></span><br><span class="line">        <span class="comment">// options: &#123;</span></span><br><span class="line">            <span class="comment">// limit: 100000,</span></span><br><span class="line">            <span class="comment">// name: utils.assetsPath('img/[name].[hash:7].[ext]')</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        	loader: [<span class="string">'url-loader?limit=10000&amp;name='</span> +	utils.assetsPath(<span class="string">'img/[name].[hash:7].[ext]'</span>),<span class="string">'image-webpack-loader'</span>]</span><br><span class="line">                   &#125;,</span><br><span class="line">               ]</span><br><span class="line">           &#125;,</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p>
+<pre><code>+ 到这一步，从最初的14M+已经压缩到了3.64M。可以说体积小了很多。后面还会让UI把一些静态资源尽量压缩小一点给我，不然一张图就几MB给我，还真hold不住！待你兴冲冲的打包完，然后发布到服务器时，你呆住了，一些背景图片访问不到了。这可咋搞???
+</code></pre><p><img src="/images/build2.png" alt="优化后体积大小" title="优化后体积大小"><br><img src="/images/byte2.png" alt="优化后体积大小" title="优化后体积大小"><br>这可难道精通百度的我，带着这个疑惑，又是一番百度，果真找到了答案。</p>
+<pre><code>+ 由于我使用了image-webpack-load 重新定义了图片的访问规则。所以导致一些使用背景图片的相对路径找不到文件，直接按照
+</code></pre><p><a href="https://www.jianshu.com/p/45acfd463347" target="_blank" rel="noopener">vue项目打包在本地直接访问</a> 设置就可以了</p>
+<pre><code> 1 打开项目文件夹。找到config文件夹里的index.js文件中的build对象，将assetsPublicPath中的“/”，改为“./”。
+2 assetsPublicPath: &apos;./&apos;,改成相对路径; 如果你的css文件中引用了background相对路径,那么在打包后预览后是会出现资源找不到的情况的;可以在build文件夹的utils.js下:新增这个publicPath这个属性;
+</code></pre> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(options.extract) &#123;</span><br><span class="line">    <span class="keyword">return</span> ExtractTexPlugin.extract(&#123;</span><br><span class="line">        use: loaders,</span><br><span class="line">        fallback: <span class="string">'vue-style-loader'</span>,</span><br><span class="line">        publicPath: <span class="string">'../../'</span> <span class="comment">//这个是重点</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>* 最后直接打开运行打包后的dist目录下面的index.html，项目就完美的运行起来了。*
+* 目前就优化这些，后面再有做别的优化，再更新上来……
 </code></pre>
       
     </div>
@@ -529,8 +540,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/封装一个vue提示组件Toast/" rel="next" title="封装一个Toast插件">
-                <i class="fa fa-chevron-left"></i> 封装一个Toast插件
+              <a href="/axios封装/" rel="next" title="封装axios 请求">
+                <i class="fa fa-chevron-left"></i> 封装axios 请求
               </a>
             
           </div>
@@ -538,10 +549,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/vue项目构建之打包/" rel="prev" title="vue项目打包优化">
-                vue项目打包优化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -709,7 +716,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#axios封装"><span class="nav-number">1.</span> <span class="nav-text">axios封装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用例子"><span class="nav-number">2.</span> <span class="nav-text">使用例子</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vue项目打包"><span class="nav-number">1.</span> <span class="nav-text">vue项目打包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M"><span class="nav-number">1.1.</span> <span class="nav-text">一个多月的时间，终于把这个vue项目写的差不多了。然后我试着build了一下，吓到我了，这么小的项目竟然打包出来14M+</span></a></li></ol></li></ol></div>
             
 
           </div>
